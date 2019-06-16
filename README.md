@@ -69,7 +69,7 @@ The goal of step 4 is to predict the data from testing set. For that, we shall c
 To do that, run 
  ```bash
 $ cd Cars_Dataset_by_EfficientNet
-$ python3 predict_and_submission.py --
+$ python3 predict_and_submission.py 
 ```
 
 
