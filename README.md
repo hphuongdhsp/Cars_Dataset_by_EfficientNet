@@ -22,12 +22,38 @@ EfficientNets achieve state-of-the-art accuracy on ImageNet with an order of mag
 ### Dataset
 
 We use only the train part of the Cars Dataset, which contains 8,144 training images of 196 classes of cars. 
- ![image](https://github.com/foamliu/Car-Recognition/raw/master/images/random.jpg)
-## Dependencies
+ ![image](https://github.com/foamliu/Car-Recognition/raw/master/images/random.jpg). The data is split into 7326 training images and 814 validation images, where each class has been split roughly in a 90-10 split.
+ 
+ ### Our approaching 
+ There are a lot of workings with this dataset. Our approaching is in particular with: 
+  * Using the bounding boxes
+  * [Using the state-of-the-art model (EfficientNet)](https://arxiv.org/pdf/1905.11946v2.pdf)
+  * Having a good fine-tuning, here 60 first epochs, we use Step learning rate. Then next 60 epochs, we use [Cyclical Learning Rate](https://arxiv.org/abs/1506.01186)
+  * We also use the Apex package. The intention of Apex is to make up-to-date utilities available to users as quickly as possible.
+ 
+### Dependencies
 
 - [NumPy](http://docs.scipy.org/doc/numpy-1.10.1/user/install.html)
-- [Tensorflow](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html)
-- [Keras](https://keras.io/#installation)
+- [Pytorch](https://github.com/pytorch/pytorch)
+- [Apex](https://github.com/NVIDIA/apex)
 - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
+- [EfficientNet PyTorch](https://github.com/lukemelas/EfficientNet-PyTorch)
+
+### Usage
+ #### Step 1: Clone my git and download data 
+ ```bash
+$ git clone https://github.com/hphuongdhsp/Cars_Dataset_by_EfficientNet
+$ cd Cars_Dataset_by_EfficientNet
+$ wget http://imagenet.stanford.edu/internal/car196/cars_train.tgz
+$ wget http://imagenet.stanford.edu/internal/car196/cars_test.tgz
+$ wget https://ai.stanford.edu/~jkrause/cars/car_devkit.tgz
+```
+#### Step 2: Split training validation by labels stratify
+
+ ```bash
+$ cd Cars_Dataset_by_EfficientNet
+$ python3 data_processing.py
+```
+
 
 
