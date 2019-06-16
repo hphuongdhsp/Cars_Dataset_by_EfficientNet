@@ -22,7 +22,9 @@ EfficientNets achieve state-of-the-art accuracy on ImageNet with an order of mag
 ### Dataset
 
 We use only the train part of the Cars Dataset, which contains 8,144 training images of 196 classes of cars. 
- ![image](https://github.com/foamliu/Car-Recognition/raw/master/images/random.jpg). The data is split into 7326 training images and 814 validation images, where each class has been split roughly in a 90-10 split.
+ ![image](https://github.com/foamliu/Car-Recognition/raw/master/images/random.jpg). 
+ 
+The data is split into 7326 training images and 814 validation images, where each class has been split roughly in a 90-10 split.
  
  ### Our approaching 
  There are a lot of workings with this dataset. Our approaching is in particular with: 
@@ -38,6 +40,7 @@ We use only the train part of the Cars Dataset, which contains 8,144 training im
 - [Apex](https://github.com/NVIDIA/apex)
 - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
 - [EfficientNet PyTorch](https://github.com/lukemelas/EfficientNet-PyTorch)
+- [Tensorboard](https://github.com/tensorflow/tensorboard)
 
 ### Usage
  #### Step 1: Clone my git and download data 
@@ -54,6 +57,22 @@ $ wget https://ai.stanford.edu/~jkrause/cars/car_devkit.tgz
 $ cd Cars_Dataset_by_EfficientNet
 $ python3 data_processing.py
 ```
+The aim of this step is spitting the training and validation set. We also use the bounding box columns to crop our images.
+
+#### Step 3: Training
+ ```bash
+$ cd Cars_Dataset_by_EfficientNet
+$ python3 train.py --
+```
+#### Maybe Step 4.
+The goal of step 4 is to predict the data from testing set. For that, we shall create a csv file, namely, submitssion.csv that is stored in ./Cars_Dataset_by_EfficientNet/data/
+To do that, run 
+ ```bash
+$ cd Cars_Dataset_by_EfficientNet
+$ python3 predict_and_submission.py --
+```
+
+
 
 
 
