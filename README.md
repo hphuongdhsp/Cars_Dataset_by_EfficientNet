@@ -71,6 +71,10 @@ To do that, run
 $ cd Cars_Dataset_by_EfficientNet
 $ python3 predict_and_submission.py 
 ```
+#### Tips
+Because of limiting of resource (only 11GB of GPU), here we use only batch-size 16 for "efficientnet-b3" model. We get 92,2% accuracy scores. To get more accuracy scores, you can change these parameters in the "parser.py". It will make a better performance. 
+
+
 
 
 
