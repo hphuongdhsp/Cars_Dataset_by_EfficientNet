@@ -62,7 +62,7 @@ The aim of this step is spitting the training and validation set. We also use th
 #### Step 3: Training
  ```bash
 $ cd Cars_Dataset_by_EfficientNet
-$ python3 train.py --
+$ python3 train.py 
 ```
 #### Maybe Step 4.
 The goal of step 4 is to predict the data from testing set. For that, we shall create a csv file, namely, submitssion.csv that is stored in ./Cars_Dataset_by_EfficientNet/data/
