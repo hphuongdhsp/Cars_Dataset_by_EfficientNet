@@ -77,10 +77,12 @@ Because of limiting of resource (only 11GB of GPU), here we use only batch-size 
 
 The pretrained weights of[EfficientNet-b4,EfficientNet-b4 ](https://arxiv.org/pdf/1905.11946v2.pdf) are released on 18-June. 
 To use them, please upgrade the pip package with 
- ```bashpip install --upgrade efficientnet-pytorch
+ ```bash
+ pip install --upgrade efficientnet-pytorch
 ```
 To use the tensorboard, please run 
- ```tensorboard --logdir /path/to/log-file
+ ```bash
+ tensorboard --logdir /path/to/log-file
 ```
 tensorboard --logdir /media/hoang-phuong/376A1D136649692B/car_data_set/tensorboard/logs
 
