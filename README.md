@@ -79,6 +79,12 @@ The pretrained weights of[EfficientNet-b4,EfficientNet-b4 ](https://arxiv.org/pd
 To use them, please upgrade the pip package with 
  ```bashpip install --upgrade efficientnet-pytorch
 ```
+To use the tensorboard, please run 
+ ```tensorboard --logdir /path/to/log-file
+```
+tensorboard --logdir /media/hoang-phuong/376A1D136649692B/car_data_set/tensorboard/logs
+
+ #### Warmings
 But there is a bug, u need to change the file" /efficientnet_pytorch/utils.py" as: 
 
     - random_tensor += torch.rand([batch_size, 1, 1, 1], dtype=inputs.dtype)  # uniform [0,1)
