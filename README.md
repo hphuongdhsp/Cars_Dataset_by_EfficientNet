@@ -80,8 +80,11 @@ To use them, please upgrade the pip package with
  ```bashpip install --upgrade efficientnet-pytorch
 ```
 But there is a bug, u need to change the file" /efficientnet_pytorch/utils.py" as: 
+
     - random_tensor += torch.rand([batch_size, 1, 1, 1], dtype=inputs.dtype)  # uniform [0,1)
+    
     + random_tensor += torch.rand([batch_size, 1, 1, 1], dtype=inputs.dtype, device=inputs.device)
+    
    Access (https://github.com/lukemelas/EfficientNet-PyTorch/commit/939d4abdeefc07e63d8bd42e7223365a4bc67942#diff-57e79865f7111e0dd0165032e805d446) to get more details. 
 
 
