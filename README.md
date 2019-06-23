@@ -75,7 +75,7 @@ $ python3 predict_and_submission.py
 Because of limiting of resource (only 11GB of GPU), here we use only batch-size 16 for "efficientnet-b3" model. We get 92,2% accuracy scores. To get more accuracy scores, you can change these parameters in the "parser.py". It will make a better performance. 
 
 
-The pretrained weights of[EfficientNet-b4,EfficientNet-b4 ](https://arxiv.org/pdf/1905.11946v2.pdf) are released on 18-June. 
+The pretrained weights of [EfficientNet-b4,EfficientNet-b4 ](https://arxiv.org/pdf/1905.11946v2.pdf) are released on 18-June. 
 To use them, please upgrade the pip package with 
  ```bash
  pip install --upgrade efficientnet-pytorch
